@@ -1,0 +1,276 @@
+<!--NavBar-->
+<div class="container-fluid" style="background-color:  #21081a;">
+    <!-- Parte de arriba -->
+    <div class="row">
+        <div class="col"><br><br></div>
+    </div>
+    <div class="row">
+        <div class="col text-center animate__animated animate__jackInTheBox animate__delay-2s">
+            <p class="h1 text-family-real titulo" style="font-size: 90px; color: goldenrod;">
+                 Secuencia Fibonacci 
+            </p>
+        </div>
+    </div>
+</div><br><br>
+    <!-- Contenido -->
+   <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2  animate__animated animate__backInRight animate__delay-1s">
+                <div class="card w-auto">
+                    <img src="assets/images/others/leonardo.jpg" class="card-img-top img-fluid rounded-start" alt="Informacion Leonardo">
+                    <div class="card-body">
+                    <h3 class="card-title">Leonardo da Pisa</h3>
+                    <p class="card-text informacion" align="justify">
+                                Fibonacci, Leonardo da Pisa. Nació en 1170 probablemente en Pisa (ahora Italia) y murió en 1250 posiblemente también en Pisa. Leonardo Pisano es mejor conocido por su sobrenombre Fibonacci (figlio diBonacci, es decir, hijo de Bonacci).                    </p><small class="text-muted">
+                                <a class="btn btn-outline-success btn-sm text-end" 
+                                    href="https://paginas.matem.unam.mx/cprieto/biografias-de-matematicos-f-j/200-fibonacci-leonardo-da-pisa">
+                                    Saber más
+                                </a>
+                            </small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 ">
+                <div class="container-fluid hidden-sm hidden-xs">
+                    <div class="row">
+                        <div class="col">
+                            <h2 class="text-center text-family-real titulo" style="color: antiquewhite; font-size: 70px;"><br><br>
+                                Fibonacci
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-xs-12 col-sm-12 ">
+                            <div class="container d-flex flex-column justify-content-center aling-items-center animate__animated animate__heartBeat animate__delay-3s">
+                                <div class="mw-100 mt-5">
+                                    <p class="text-center text-family-real" style="font-size: 30px; color: antiquewhite;">
+                                        Ingresa un <u>numero entero POSITIVO</u>
+                                    </p>
+                                    <!-- FORMULARIO -->
+                                    <form [formGroup]="numeroForm" (ngSubmit)="comprobar()">
+                                        <div class="mb-3">
+                                            <!-- INNPUTS del FORM-->
+                                            <input
+                                            class="form-control form-control-sm"
+                                            type="number"
+                                            min="0"
+                                            value="0"
+                                            formControlName="numero"
+                                            >
+                                            <div
+                                                class="text-danger"
+                                                *ngIf="
+                                                    numeroForm.get('numero')?.hasError('required') &&
+                                                    numeroForm.get('numero')?.touched
+                                                "
+                                                >
+                                                <!--Va dentro del div, es una condicion-->
+                                                <p style="color: yellow;">Recuerda ingresar un numero
+                                                    entero positivo</p>
+                                            </div>
+                                            <div class="text-end">
+                                                <button 
+                                                    type="submit"
+                                                    [disabled]="numeroForm.invalid"
+                                                    class="btn btn-primary btn-block"
+                                                    style="margin-top: 3px;"
+                                                >
+                                                    Verificar
+                                                </button><br><br>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="card animate__animated animate__backInLeft animate__delay-1s">
+                                <div class="card-body ">
+                                <p class="card-text informacion">
+                                    Esta aplicacion te dirá si un numero entero positivo forma parte de la famosa
+                                    serie de fibonacci , para nosotros comprobar si existe dentro de esta secuencia existe una
+                                    propiedad dentro de la secuencia con la cual podremos comprarlo. Para ello debemos
+                                    comprobar si <strong>(5* x^2 + 4) ó (5 * x^2 - 4) es un cuadrado perfecto</strong>.
+
+                                    Un número es cuadrado perfecto si se obtiene el número al elevar al cuadrado cualquier 
+                                    número natural.
+                                    
+                                    <strong>Ejemplo seria el numero 9. Ya que 3 * 3 = 9.</strong>
+                                    <br><br>
+                                    <i> Esto se puede explicar mejor en el siguiente libro. The Fabulous Fibonacci Numbers de Alfred S. Posamentier.</i>
+                                </p>
+                                <a class="btn btn-success btn-block" href="https://quantdare.com/numeros-de-fibonacci/#:~:text=En%20matem%C3%A1ticas%2C%20la%20sucesi%C3%B3n%20o,nombre%20de%20n%C3%BAmero%20de%20Fibonacci.">
+                                    Ver más
+                                    
+                                </a>
+                                </div>
+                            </div>
+                            <br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card w-auto">
+                                <img src="assets/images/bg2.jpg" class="card-img-top img-fluid rounded-start" alt="Informacion Leonardo">
+                                <div class="card-body">
+                                <h3 class="card-title">Fibonacci</h3>
+                                <p class="card-text informacion" align="justify">
+                                    Existe una secuencia numérica que sostiene el mundo que conocemos y no,
+                                    no es el número pi, tampoco es la ley de la gravedad, 
+                                    se trata del código secreto de la naturaleza. En realidad, 
+                                    lejos de permanecer es secreto, como escondido u oculto, 
+                                    este conjunto infinito de números está por todas partes.
+                                    <small class="text-muted">
+                                            <a class="btn btn-outline-success btn-sm text-end" 
+                                                href="https://www.elconfidencial.com/alma-corazon-vida/educacion/2022-02-04/que-es-secuencia-fibonacci_3366357/">
+                                                Saber más
+                                            </a>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+   </div>
+    
+<!-- Footer -->
+<footer class=" text-white" style="background-color:#21081a;">
+    <!-- Grid container -->
+    <div class="container p-4 text-center">
+  
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Twitch -->
+        <a class="btn btn-outline-primary m-1" href="https://www.twitch.tv/c0l1nr00t" role="button">
+            <i class="ri-twitch-fill"></i></a> 
+        
+        <!-- Twitter -->
+        <a class="btn btn-outline-primary m-1" href="https://twitter.com/c0l1nr00t" role="button">
+            <i class="ri-twitter-fill"></i></a>
+  
+        <!-- Youtube -->
+        <a class="btn btn-outline-danger m-1" href="https://www.youtube.com/channel/UComq0UZv3_TVN_PtrCzr8xQ" role="button">
+            <i class="ri-youtube-fill"></i></a>
+  
+        <!-- Linkedin -->
+        <a class="btn btn-outline-primary m-1" href="https://linkedin.com/in/luisantoniocolin" role="button">
+            <i class="ri-linkedin-fill"></i></a>
+        <!-- Github -->
+        <a class="btn btn-outline-secondary m-1" href="https://github.com/ColinTony" role="button">
+            <i class="ri-github-fill"></i></a>
+      </section>
+  
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase"><strong>
+                Desarrollador
+            </strong></h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <p style="font-family: Arial;" > 
+                    <i>Luis Antonio Colin Heredia (ColinTony)</i>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Frameworks</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <p style="font-family: Arial;" > 
+                    <a class="list-group-item list-group-item-action active" href="https://angular.io/">
+                        <i>Angular</i>
+                    </a>
+                </p>
+              </li>
+              <li>
+                <p style="font-family: Arial;" > 
+                    <a class="list-group-item list-group-item-action active" href="https://getbootstrap.com/">
+                        <i>Bootstrap</i>
+                    </a>
+                </p>
+              </li>
+              
+            </ul>
+          </div>
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Referencias</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <p style="font-family: Arial;" > 
+                    <a class="list-group-item list-group-item-action active" 
+                    href="https://www.elconfidencial.com/alma-corazon-vida/educacion/2022-02-04/que-es-secuencia-fibonacci_3366357/">
+                        <i>El confidencial (Secuencia Fibonacci)</i>
+                    </a>
+                </p>
+              </li>
+              <li>
+                <p style="font-family: Arial;" > 
+                    <a class="list-group-item list-group-item-action active" 
+                    href="https://paginas.matem.unam.mx/cprieto/biografias-de-matematicos-f-j/200-fibonacci-leonardo-da-pisa">
+                        <i>Instituo de matematicas UNAM (Fibonacci, Leaonardo da Pisa)</i>
+                    </a>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Contacto</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <p style="font-family: Arial;" > 
+                    <a class="list-group-item list-group-item-action active" 
+                    href="https://api.whatsapp.com/send?phone=5215581832383">
+                        <i class="ri-whatsapp-line"> +525581832383</i>
+                    </a>
+                </p>
+              </li>
+              <li>
+                <p style="font-family: Arial;" > 
+                    <a class="list-group-item list-group-item-action active" 
+                    href="mailto:mr.c0l1nr00t@gmail.com">
+                        <i class="ri-mail-line"> mr.c0l1nr00t@gmail.com</i>
+                    </a>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+  
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      <a class="text-white" href="https://github.com/ColinTony">ColinTonyDev</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->

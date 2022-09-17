@@ -1,1 +1,95 @@
 /* You can add global styles to this file, and also import other style files */
+/*
+    screens
+*/
+@media only screen and (max-width:480px){
+    .titulo{
+        font-size: 38px !important;
+    }
+}
+
+@media only screen and (max-width:330px){
+    .titulo{
+        font-size: 28px !important;
+    }
+}
+/* Fuente */
+
+@font-face {
+    font-family: Dirty;
+    src: url(assets/fonts/fuente.ttf);
+}
+
+
+@font-face {
+    font-family: Real;
+    src: url(assets/fonts/REAL_TATOEM.ttf);
+}
+@font-face {
+    font-family: HandText;
+    src: url(assets/fonts/hand.ttf);
+}
+@font-face {
+    font-family: Comicate;
+    src: url(assets/fonts/COMICATE.TTF);
+}
+
+@font-face {
+    font-family: Fast;
+    src: url(assets/fonts/fast99.ttf);
+}
+
+@font-face {
+    font-family: Monse;
+    src: url(assets/fonts/Monserga-regular-FFP.ttf);
+}
+
+.bg {
+    background-image: url(assets/images/fondo4.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.bg-black
+{
+    background-color: black;
+}
+
+
+.text-family-comicate{
+    font-family: Comicate;
+    color: white;
+}
+
+.informacion{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.text-family-monse{
+    font-family: Monse;
+    color: white;
+}
+
+.text-family-fast{
+    font-family: Fast;
+    color: white;
+}
+
+.text-family-dirty{
+    font-family: Dirty;
+    color: white;
+}
+
+.text-family-hand{
+    font-family: HandText;
+    color: white;
+}
+
+
+.text-family-real{
+    font-family: Real;
+    color: white;
+}
