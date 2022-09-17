@@ -13,7 +13,11 @@
 
   Esto se puede explicar mejor en el siguiente libro.
   The Fabulous Fibonacci Numbers de Alfred S. Posamentier  (Author), Ingmar Lehmann (Author)
-*/
+  
+  Comando para hacer el deploy
+  ng deploy --base-href=https://colintony.github.io/Fibonacci/
+  */
+
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'; // para el manejo de los datos del formulario
 import Swal from 'sweetalert2' // Libreria para las alertas.
@@ -77,7 +81,7 @@ export class FiboComponent implements OnInit {
         icon: 'success',
         title: '¡Es un numero de Fibonacci!',
         showConfirmButton: false,
-        timer: 1200
+        timer: 2500
       })
     }else{
       // si no cumple entonces no es parte de la secuancia}
@@ -87,7 +91,7 @@ export class FiboComponent implements OnInit {
         text: 'Intenta con otro numero',
         icon: 'error',
         showConfirmButton: false,
-        timer: 1800
+        timer: 2000
       })
     }
   }
